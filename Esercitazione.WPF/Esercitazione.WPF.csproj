@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\114888.png" />
+    <None Remove="Views\1649999-200.png" />
+    <None Remove="Views\6770c916f0a8c48c20386e4ae6032007.png" />
+    <None Remove="Views\black-button-update-shiny-isolated-109185946.jpg" />
+    <None Remove="Views\hand-cursor-clicking-update-button-1562819.jpg" />
+    <None Remove="Views\Shein-logo - Copy.png" />
+    <None Remove="Views\Shein-logo.png" />
+    <None Remove="Views\trash-can-black-delete-button-icon-vector-31046473.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Esercitazione.Core.Mock\Esercitazione.Core.Mock.csproj" />
+    <ProjectReference Include="..\Esercitazione.Core\Esercitazione.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\114888.png" />
+    <Resource Include="Views\1649999-200.png" />
+    <Resource Include="Views\6770c916f0a8c48c20386e4ae6032007.png" />
+    <Resource Include="Views\black-button-update-shiny-isolated-109185946.jpg" />
+    <Resource Include="Views\hand-cursor-clicking-update-button-1562819.jpg" />
+    <Resource Include="Views\Shein-logo - Copy.png" />
+    <Resource Include="Views\Shein-logo.png" />
+    <Resource Include="Views\trash-can-black-delete-button-icon-vector-31046473.jpg" />
+  </ItemGroup>
+
+</Project>

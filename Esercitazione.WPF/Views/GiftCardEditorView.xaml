@@ -1,0 +1,38 @@
+﻿<Window x:Class="Esercitazione.WPF.Views.GiftCardEditorView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Esercitazione.WPF.Views"
+        xmlns:views="clr-namespace:Esercitazione.WPF.Views"
+        xmlns:vm="clr-namespace:Esercitazione.WPF.ViewModels"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=vm:GiftCardEditorViewModel, IsDesignTimeCreatable=True}"
+
+        Title="GiftCardEditorView" Height="450" Width="800">
+    <Window.Resources>
+        <DataTemplate x:Key="GiftCardRowTemplate">
+            <views:GiftCardRowView/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Background="#FFF3DEDE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="4">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Views/Shein-logo - Copy.png" Stretch="Uniform"/>
+            </StackPanel.Background>
+            <TextBlock VerticalAlignment="Center" FontWeight="Bold" FontSize="36" Margin="4,0,0,0" Text="">
+            </TextBlock>
+        </StackPanel>
+        <Button Margin="672,0,4,12" Grid.Row="0" Command="{Binding CreateGiftCard}" Grid.RowSpan="2" Content="Regala una gift card!" Background="#FFD79090" FontWeight="Bold">
+        </Button>
+        <ListBox Grid.Row="1" Grid.ColumnSpan="2" Margin="4" HorizontalContentAlignment="Stretch" ItemsSource="{Binding Path=GiftCards}" ItemTemplate="{StaticResource GiftCardRowTemplate}"/>
+    </Grid>
+</Window>
